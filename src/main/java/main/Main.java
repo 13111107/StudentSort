@@ -3,6 +3,8 @@ package main;
 import domin.Student;
 import studentInfoManager.StuInfoSave;
 import studentInfoManager.StuInfoSaveImpl;
+import userInput.InputService;
+import userInput.InputServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,9 +22,8 @@ public class Main {
         StuInfoSave stuInfoSave = new StuInfoSaveImpl();
         arrayList = stuInfoSave.saveStuInfo();
 
-        for(int i=0; i<arrayList.size(); i++){
-            System.out.println(arrayList.get(i).toString());
-        }
+        InputService inputService = new InputServiceImpl();
+        inputService.userInput(arrayList);
 
     }
 }
