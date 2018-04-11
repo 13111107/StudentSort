@@ -4,6 +4,7 @@ import domin.Student;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +23,14 @@ public class OutputServiceImplTest {
         arrayList.add(new Student("2002",24,94));
         arrayList.add(new Student("2008",23,88));
     }
+
+    @Test
+    public void outputFile() throws Exception {
+        OutputService outputService = new OutputServiceImpl();
+        outputService.outputFile(new File("test1.csv"),arrayList);
+    }
+
+
 
     @Test
     public void outputConsole() throws Exception {

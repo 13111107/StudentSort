@@ -10,4 +10,5 @@ import java.util.List;
  */
 public interface OutputService {
     public void outputConsole(List<Student> arrayList);
+    public boolean outputFile(File file, List<Student> arrayList);
 }
